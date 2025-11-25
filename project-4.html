@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zero Trust Network, Enclave – Eduard Novokhatskyi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+  <div class="animated-mesh-gradient"></div>
+
+  
+  <div class="floating-header" id="floatingHeader">
+    <div class="floating-header-content">
+      <nav class="floating-header-nav">
+        <a href="index.html" class="logo-link">
+          <svg width="32" height="26" viewBox="0 0 348 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5635_5976)">
+              <path d="M244.711 250.309C205.659 289.361 142.341 289.361 103.289 250.309L5.00147 152.021C-1.63744 145.382 -1.63755 134.618 5.00147 127.979L103.289 29.6913C142.341 -9.36075 205.659 -9.36075 244.711 29.6913L342.999 127.979C349.638 134.618 349.637 145.382 342.999 152.021L244.711 250.309ZM237.64 45.2477C202.492 10.1002 145.508 10.1002 110.36 45.2477L79.2477 76.3604C44.1002 111.508 44.1002 168.492 79.2477 203.64L110.36 234.752C145.508 269.9 202.492 269.9 237.64 234.752L268.752 203.64C303.9 168.492 303.9 111.508 268.752 76.3604L237.64 45.2477Z" fill="black" style="fill:rgb(255, 255, 255);fill-opacity:1;"/>
+              <path class="logo-rotate" d="M170.062 143.938V163.625L130.688 203H111V183.312L150.375 143.938H170.062ZM237 183.312V203H217.312L177.938 163.625V143.938H197.625L237 183.312ZM170.062 116.375V136.062H150.375L111 96.6875V77H130.688L170.062 116.375ZM237 96.6875L197.625 136.062H177.938V116.375L217.312 77H237V96.6875Z" fill="black" style="fill:rgb(255, 255, 255);fill-opacity:1;"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_5635_5976">
+                <rect width="348" height="280" fill="white" style="fill:white;fill-opacity:1;"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <div class="nav-links-container">
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#playground">Playground</a>
+          <a href="index.html#about">About</a>
+        </div>
+        <a href="mailto:eduardnovokhatsky@gmail.com" class="cta-button">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <section class="project-header">
+    <h1>Zero Trust Network, <a href="https://enclave.io/" target="_blank" rel="noopener">Enclave</a></h1>
+    <div class="project-year">2022-2023</div>
+    <div class="project-description-text">
+      Enclave is a Zero Trust connectivity platform used by security-focused engineering teams to create private, encrypted networks without traditional VPN complexity.
+      <br> <br>
+      My role was to redesign core product flows and the web experience—making system configuration, access control, and network visualization clearer and easier to operate. I worked on UX for dashboards, system listings, onboarding, and policy management, bringing consistency across a multi-layered, highly technical product.
+    </div>
+  </section>
+
+  <section class="project-images">
+    <div class="project-image-item">
+      <img src="assets/project-4_cover.png" alt="Enclave Image 1">
+    </div>
+  </section>
+
+  <section class="other-projects">
+    <h2>Other Projects</h2>
+    <ul class="other-projects-list">
+      <li><a href="project-1.html">Rentberry AI Agent (RAI)</a></li>
+      <li><a href="project-2.html">Global home rental platform, Rentberry</a></li>
+      <li><a href="project-3.html">Icons design for iOS and macOS apps.</a></li>
+      <li><a href="project-5.html">Human-friendly candidate screening software Willo</a></li>
+      <li><a href="project-6.html">Swiss Crypto exchange platform Amixy</a></li>
+      <li><a href="project-7.html">Project 7</a></li>
+    </ul>
+  </section>
+
+  <!-- Image Slider Overlay -->
+  <div class="image-slider-overlay" id="imageSliderOverlay">
+    <div class="image-slider-container">
+      <button class="image-slider-btn prev" id="sliderPrevBtn">‹</button>
+      <img class="image-slider-image" id="sliderImage" src="" alt="">
+      <button class="image-slider-btn next" id="sliderNextBtn">›</button>
+      <button class="image-slider-close" id="sliderCloseBtn">×</button>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      var currentImageIndex = 0;
+      var images = [];
+      
+      // Collect all images from project-images section
+      $('.project-images .project-image-item img').each(function() {
+        images.push($(this).attr('src'));
+      });
+
+      // Open slider when clicking on an image
+      $('.project-images .project-image-item img').on('click', function() {
+        var clickedSrc = $(this).attr('src');
+        currentImageIndex = images.indexOf(clickedSrc);
+        
+        if (currentImageIndex !== -1) {
+          updateSliderImage();
+          $('#imageSliderOverlay').addClass('active');
+          $('body').css('overflow', 'hidden');
+        }
+      });
+
+      // Update slider image
+      function updateSliderImage() {
+        if (images.length > 0) {
+          $('#sliderImage').attr('src', images[currentImageIndex]);
+        }
+      }
+
+      // Next image
+      $('#sliderNextBtn').on('click', function(e) {
+        e.stopPropagation();
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        updateSliderImage();
+      });
+
+      // Previous image
+      $('#sliderPrevBtn').on('click', function(e) {
+        e.stopPropagation();
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        updateSliderImage();
+      });
+
+      // Close slider
+      function closeSlider() {
+        $('#imageSliderOverlay').removeClass('active');
+        $('body').css('overflow', '');
+      }
+
+      $('#sliderCloseBtn').on('click', function(e) {
+        e.stopPropagation();
+        closeSlider();
+      });
+
+      // Close on overlay click (but not on image/buttons)
+      $('#imageSliderOverlay').on('click', function(e) {
+        if ($(e.target).hasClass('image-slider-overlay')) {
+          closeSlider();
+        }
+      });
+
+      // Keyboard navigation
+      $(document).on('keydown', function(e) {
+        if ($('#imageSliderOverlay').hasClass('active')) {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateSliderImage();
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateSliderImage();
+          } else if (e.key === 'Escape') {
+            e.preventDefault();
+            closeSlider();
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
