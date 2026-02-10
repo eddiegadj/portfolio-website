@@ -691,8 +691,8 @@
       text-align: left;
       margin: 10rem 0;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 8rem;
       align-items: flex-start;
     }
 
@@ -703,6 +703,17 @@
 
     #about p {
       margin-top: .3rem;
+    }
+
+    #about .about-intro {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    #about .about-intro p {
+      margin-top: 0;
     }
 
     .profile-name {
