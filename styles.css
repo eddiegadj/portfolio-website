@@ -904,6 +904,13 @@
       font-weight: 400;
     }
 
+    /* Improve spacing for project roles/tags on project detail pages */
+    .project-header .project-role {
+      margin-top: 0.75rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
     /* Slider Styles */
     .slider-container {
       position: relative;
@@ -1299,11 +1306,6 @@
       font-size: 3rem;
       line-height: 1.2;
       margin-bottom: 1rem;
-    }
-
-    .project-header .project-role {
-      margin-top: 0;
-      margin-bottom: 1.5rem;
     }
 
     /* Full-screen Image Slider */
