@@ -582,6 +582,7 @@
 
     .cta-button {
       display: inline-block;
+      max-width: max-content;
       color: #ffffff !important;
       background: transparent;
       border: 1px solid #ffffffb2;
@@ -643,6 +644,16 @@
       transform-origin: 174px 140px;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #projects,
+    #playground,
+    #about {
+      scroll-margin-top: 5.5rem;
+    }
+
     body {
       max-width: 80%;
       margin: 100px auto 0 auto;
@@ -666,6 +677,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+
+    .hero-subheading {
+      margin: 1rem 0 0;
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 28em;
     }
 
     #about {
@@ -873,7 +892,16 @@
     .project-description {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
       padding: .5rem 0 0 0;
+    }
+
+    .project-role {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 400;
     }
 
     /* Slider Styles */
@@ -1091,6 +1119,24 @@
       font-size: 1.8rem;
     }
 
+    .page-section .section-title {
+      margin-top: 0;
+    }
+
+    .footer-cta {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-cta a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+    }
+
+    .footer-cta a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       /* margin-top: 2rem; */
       margin-bottom: 7rem;
@@ -1253,6 +1299,11 @@
       font-size: 3rem;
       line-height: 1.2;
       margin-bottom: 1rem;
+    }
+
+    .project-header .project-role {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
     }
 
     /* Full-screen Image Slider */

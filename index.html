@@ -19,7 +19,7 @@
   <div class="floating-header" id="floatingHeader">
     <div class="floating-header-content">
       <nav class="floating-header-nav">
-        <a href="#" class="logo-link" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        <a href="#" class="logo-link" aria-label="Back to top">
           <svg width="32" height="26" viewBox="0 0 348 280" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_5635_5976)">
               <path d="M244.711 250.309C205.659 289.361 142.341 289.361 103.289 250.309L5.00147 152.021C-1.63744 145.382 -1.63755 134.618 5.00147 127.979L103.289 29.6913C142.341 -9.36075 205.659 -9.36075 244.711 29.6913L342.999 127.979C349.638 134.618 349.637 145.382 342.999 152.021L244.711 250.309ZM237.64 45.2477C202.492 10.1002 145.508 10.1002 110.36 45.2477L79.2477 76.3604C44.1002 111.508 44.1002 168.492 79.2477 203.64L110.36 234.752C145.508 269.9 202.492 269.9 237.64 234.752L268.752 203.64C303.9 168.492 303.9 111.508 268.752 76.3604L237.64 45.2477Z" fill="black" style="fill:rgb(255, 255, 255);fill-opacity:1;"/>
@@ -33,9 +33,9 @@
           </svg>
         </a>
         <div class="nav-links-container">
-          <a href="#projects" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('projects').offsetTop - 40, behavior: 'smooth'}); return false;">Projects</a>
-          <a href="#playground" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('playground').offsetTop - 40, behavior: 'smooth'}); return false;">Playground</a>
-          <a href="#about" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('about').offsetTop - 40, behavior: 'smooth'}); return false;">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#playground">Playground</a>
+          <a href="#about">About</a>
         </div>
         <a href="mailto:eduardnovokhatsky@gmail.com" class="cta-button">Contact</a>
       </nav>
@@ -45,11 +45,12 @@
 
 
   <header>
-    <h1>Solving product puzzles through logic, empathy, and style.</h1>
+    <h1>Design for scalable SaaS products.</h1>
+    <p class="hero-subheading">I design complex systems users can understand and trust.</p>
   </header>
 
-  <!-- Projects -->
-  <section id="projects">
+  <section id="projects" class="page-section">
+    <h2 class="section-title">Projects</h2>
     <div class="project-grid">
 
       <!-- project 1 -->
@@ -59,13 +60,12 @@
             <img src="assets/project-1_cover.png" alt="Rentberry AI Agent (RAI)">
           </div>
         </a>
-        <!-- Nested Desctiption -->
         <div class="project-description">
-          <span>Rentberry AI Agent (RAI)</span> <span>2025</span>
+          <span>Rentberry AI Agent (RAI)</span>
+          <span class="project-role">Product design · UX/UI · AI experience</span>
         </div>
       </div>
-      
-      
+
       <!-- project 2 -->
       <div class="project-wrapper">
         <a href="project-2.html" style="text-decoration: none; display: block;">
@@ -73,25 +73,12 @@
             <img src="assets/project-2_cover.png" alt="Global home rental platform, Rentberry">
           </div>
         </a>
-        <!-- Nested Desctiption -->
         <div class="project-description">
-          <span>Global home rental platform, <a href="https://rentberry.com/" target="_blank" rel="noopener">Rentberry</a></span> <span>2023-2025</span>
+          <span>Global home rental platform, <a href="https://rentberry.com/" target="_blank" rel="noopener">Rentberry</a></span>
+          <span class="project-role">Product design · UX/UI · Design system</span>
         </div>
       </div>
-      
-      <!-- project 3 -->
-      <div class="project-wrapper">
-        <a href="project-3.html" style="text-decoration: none; display: block;">
-          <div class="project-item">
-            <img src="assets/project-3.png" alt="App icons design">
-          </div>
-        </a>
-        <!-- Nested Desctiption -->
-        <div class="project-description">
-          <span>Icons design for iOS and macOS apps.</span> <span>2020-2025</span>
-        </div>
-      </div>
-      
+
       <!-- project 5 -->
       <div class="project-wrapper">
         <a href="project-5.html" style="text-decoration: none; display: block;">
@@ -99,12 +86,12 @@
             <img src="assets/project-5_cover.png" alt="Human-friendly candidate screening software Willo">
           </div>
         </a>
-        <!-- Nested Desctiption -->
         <div class="project-description">
-          <span>Human-friendly candidate screening software <a href="https://willo.video/" target="_blank" rel="noopener">Willo</a></span> <span>2022</span>
+          <span>Human-friendly candidate screening software <a href="https://willo.video/" target="_blank" rel="noopener">Willo</a></span>
+          <span class="project-role">Product design · UX/UI</span>
         </div>
       </div>
-      
+
       <!-- project 6 -->
       <div class="project-wrapper">
         <a href="project-6.html" style="text-decoration: none; display: block;">
@@ -112,12 +99,12 @@
             <img src="assets/project-6_cover.png" alt="Swiss Crypto exchange platform Amixy">
           </div>
         </a>
-        <!-- Nested Desctiption -->
         <div class="project-description">
-          <span>Swiss Crypto exchange platform <a href="https://amixy.com/" target="_blank" rel="noopener">Amixy</a></span> <span>2021-2022</span>
+          <span>Swiss Crypto exchange platform <a href="https://amixy.com/" target="_blank" rel="noopener">Amixy</a></span>
+          <span class="project-role">Product design · UX/UI · Mobile</span>
         </div>
       </div>
-      
+
       <!-- project 7 -->
       <div class="project-wrapper">
         <a href="project-7.html" style="text-decoration: none; display: block;">
@@ -125,18 +112,18 @@
             <img src="assets/project-7_cover.png" alt="Healthcare Chatbot Platform for Clinical by Qliqsoft">
           </div>
         </a>
-        <!-- Nested Desctiption -->
         <div class="project-description">
-          <span>Healthcare chatbot platform for clinical workflows by <a href="https://www.qliqsoft.com/" target="_blank" rel="noopener">Qliqsoft</a></span> <span>2020-2021</span>
+          <span>Healthcare chatbot platform for clinical workflows by <a href="https://www.qliqsoft.com/" target="_blank" rel="noopener">Qliqsoft</a></span>
+          <span class="project-role">Product design · UX/UI · Design system</span>
         </div>
       </div>
-      
+
     </div>
     
   </section>
 
-  <!-- Playground -->
-  <section id="playground">
+  <section id="playground" class="page-section">
+    <h2 class="section-title">Playground</h2>
     <div class="project-grid">
       <div class="project-wrapper">
         <div class="playground-item project-item">
@@ -165,19 +152,16 @@
             </div>
           </div>
         </div>
-        <!-- Nested Description -->
         <div class="project-description">
           <span>Phone wallpapers</span>
-          
         </div>
       </div>
       <div class="project-wrapper">
         <div class="playground-item">
-          <video src="assets/project-1_Heatmap@512w.mp4" alt="RAI logo animation" autoplay loop muted playsinline>
+          <video src="assets/project-1_Heatmap@512w.mp4" autoplay loop muted playsinline aria-label="RAI logo animation">
             Sorry, your browser doesn't support embedded videos.
           </video>
         </div>
-        <!-- Nested Description -->
         <div class="project-description">
           <span>RAI logo animation</span>
         </div>
@@ -186,15 +170,16 @@
     </div>
   </section>
 
-  <!-- About Me & Work Experience -->
-  <section id="about">
-    <p>I'm <span class="profile-name" style="font-style: italic;">Eduard</span> — a software designer crafting systems, interfaces, and interactions. Connect with me on <a href="https://x.com/eddiegadj" target="_blank" rel="noopener noreferrer" aria-label="Follow on X (Twitter)">X</a> or <a href="https://www.linkedin.com/in/eduardnovohatsky/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">LinkedIn</a></p>
-    <p>Over the past 11+ years, I've been designing digital products that turn complex systems into clear, functional experiences.</p>
-    <p>I focus on design systems, user experience, and prototyping. Building ideas that connect design and code in a simple way.</p>
-    <p><a href="assets/CV_Novokhatskyi_2025.pdf" download class="cta-button">Download CV</a></p>
+  <section id="about" class="page-section">
+    <h2 class="section-title">About</h2>
+    <p>I'm <span class="profile-name" style="font-style: italic;">Eduard</span> — a product designer with 11+ years turning complex systems into clear, scalable experiences. I focus on design systems, UX, and prototyping where design and code meet.</p>
+    <p>Connect on <a href="https://x.com/eddiegadj" target="_blank" rel="noopener noreferrer" aria-label="Follow on X (Twitter)">X</a> or <a href="https://www.linkedin.com/in/eduardnovohatsky/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">LinkedIn</a></p>
+    <a href="assets/CV_Novokhatskyi_2025.pdf" download class="cta-button">Download CV</a>
   </section>
+
   <footer>
-    © Eduard Novokhatskyi 2025
+    <p class="footer-cta"><a href="mailto:eduardnovokhatsky@gmail.com">Open to work</a> — say hello</p>
+    <p>© Eduard Novokhatskyi 2025</p>
   </footer>
 
   <script>
